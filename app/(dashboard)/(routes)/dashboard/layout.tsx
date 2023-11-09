@@ -25,7 +25,7 @@ export default function DashboardLayout({
 				<Sidebar />
 			</div>
 
-			<div className="p-3 ml-[17rem] min-h-screen h-full">
+			<div className="p-3 pb-7 ml-[17rem] min-h-screen h-full">
 				<Navbar />
 				{children}
 			</div>

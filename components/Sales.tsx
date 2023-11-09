@@ -71,22 +71,14 @@ const Sales = () => {
 				</Button>
 			</div>
 
-			<div className="grid md:grid-cols-2 xl:grid-cols-4 gap-3 mt-8">
+			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
 				<Card
 					icon={MdAnalytics}
-					iconBg="bg-rose-500"
-					background="bg-rose-500/10"
+					iconBg="bg-orange-500"
+					background="bg-orange-500/10"
 					totalSale="$5k"
 					saleName="Total Sales"
 					percentage="+5"
-				/>
-				<Card
-					icon={HiClipboardDocumentList}
-					iconBg="bg-orange-500"
-					background="bg-orange-500/10"
-					totalSale="200"
-					saleName="Total Orders"
-					percentage="+9"
 				/>
 				<Card
 					icon={BiSolidShoppingBag}

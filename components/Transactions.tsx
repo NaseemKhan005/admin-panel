@@ -36,16 +36,18 @@ const Transactions = () => {
 							)}{" "}
 							<div className="flex flex-col gap-0">
 								<span>Naseem Khan</span>
-								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">admin</span>
+								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">
+									admin
+								</span>
 							</div>
 						</td>
 						<td className="pt-4">
-							<span className="bg-green-500 w-fit rounded-sm text-xs p-1 font-semibold text-white">
+							<span className="bg-green-500 w-fit rounded-sm text-xs p-1 font-[500] text-white">
 								done
 							</span>
 						</td>
 						<td className="pt-4">25/11/2023</td>
-						<td className="pt-4 font-[500]">$500.00</td>
+						<td className="pt-4 font-semibold">$500.00</td>
 					</tr>
 					<tr>
 						<td className="flex items-center gap-2 font-semibold pt-4">
@@ -62,16 +64,18 @@ const Transactions = () => {
 							)}{" "}
 							<div className="flex flex-col gap-0">
 								<span>Naseem Khan</span>
-								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">Manager</span>
+								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">
+									Manager
+								</span>
 							</div>
 						</td>
 						<td className="pt-4">
-							<span className="bg-red-500 w-fit rounded-sm text-xs p-1 font-semibold text-white">
+							<span className="bg-red-500 w-fit rounded-sm text-xs p-1 font-[500] text-white">
 								canelled
 							</span>
 						</td>
 						<td className="pt-4">25/11/2023</td>
-						<td className="pt-4 font-[500]">$500.00</td>
+						<td className="pt-4 font-semibold">$500.00</td>
 					</tr>
 					<tr>
 						<td className="flex items-center gap-2 font-semibold pt-4">
@@ -88,16 +92,18 @@ const Transactions = () => {
 							)}{" "}
 							<div className="flex flex-col gap-0">
 								<span>Naseem Khan</span>
-								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">customer</span>
+								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">
+									customer
+								</span>
 							</div>
 						</td>
 						<td className="pt-4">
-							<span className="bg-orange-500 w-fit rounded-sm text-xs p-1 font-semibold text-white">
+							<span className="bg-orange-500 w-fit rounded-sm text-xs p-1 font-[500] text-white">
 								pending
 							</span>
 						</td>
 						<td className="pt-4">25/11/2023</td>
-						<td className="pt-4 font-[500]">$500.00</td>
+						<td className="pt-4 font-semibold">$500.00</td>
 					</tr>
 					<tr>
 						<td className="flex items-center gap-2 font-semibold pt-4">
@@ -114,16 +120,18 @@ const Transactions = () => {
 							)}{" "}
 							<div className="flex flex-col gap-0">
 								<span>Naseem Khan</span>
-								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">member</span>
+								<span className="text-[.8rem] -mt-1 font-[500] text-neutral-500 dark:text-neutral-400">
+									member
+								</span>
 							</div>
 						</td>
 						<td className="pt-4">
-							<span className="bg-green-500 w-fit rounded-sm text-xs p-1 font-semibold text-white">
+							<span className="bg-green-500 w-fit rounded-sm text-xs p-1 font-[500] text-white">
 								done
 							</span>
 						</td>
 						<td className="pt-4">25/11/2023</td>
-						<td className="pt-4 font-[500]">$500.00</td>
+						<td className="pt-4 font-semibold">$500.00</td>
 					</tr>
 				</tbody>
 			</table>
