@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HiMiniUser } from "react-icons/hi2";
+import { FiLogOut } from "react-icons/fi";
 
 import { menuItems } from "@/constants/Sidebar";
 import { cn } from "@/lib/utils";
 import { Switch } from "./ui/switch";
-import { Button } from "./ui/button";
-import { FiLogOut } from "react-icons/fi";
+import Avatar from "./common/Avatar";
 
 const Sidebar = () => {
 	const pathname = usePathname();
@@ -16,14 +15,12 @@ const Sidebar = () => {
 	return (
 		<div className="fixed top-0 left-0 max-w-[17rem] w-full bg-white dark:bg-soft-black dark:text-white h-screen overflow-y-scroll py-7 px-3">
 			<div className="flex items-center gap-2">
-				<div className="bg-neutral-400 dark:bg-white dark:text-neutral-600 w-fit rounded-full p-2 text-white text-3xl">
-					<HiMiniUser />
-				</div>
+				<Avatar />
 				<div className="capitalize ">
-					<p className="text-[.8rem] font-semibold dark:text-white">
+					<p className="font-semibold dark:text-white">
 						naseem khan
 					</p>
-					<p className="text-[.7rem] text-black/70 dark:text-neutral-300">
+					<p className="text-[.8rem] -mt-1 text-black/70 dark:text-neutral-300">
 						administrator
 					</p>
 				</div>

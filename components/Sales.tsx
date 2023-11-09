@@ -1,7 +1,9 @@
 "use client";
 
-import { BiExport } from "react-icons/bi";
+import { BiExport, BiSolidShoppingBag } from "react-icons/bi";
 import { MdAnalytics } from "react-icons/md";
+import { FaUserPlus } from "react-icons/fa6";
+import { HiClipboardDocumentList } from "react-icons/hi2";
 
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -56,7 +58,9 @@ const Sales = () => {
 					<h2 className="text-soft-black dark:text-white font-semibold text-lg">
 						Today&apos;s Sales
 					</h2>
-					<p className="text-muted-foreground/60 text-sm">Sales Summery</p>
+					<p className="text-muted-foreground/60 dark:text-white/50 text-sm">
+						Sales Summery
+					</p>
 				</div>
 				<Button
 					variant="outline"
@@ -77,7 +81,7 @@ const Sales = () => {
 					percentage="+5"
 				/>
 				<Card
-					icon={MdAnalytics}
+					icon={HiClipboardDocumentList}
 					iconBg="bg-orange-500"
 					background="bg-orange-500/10"
 					totalSale="200"
@@ -85,7 +89,7 @@ const Sales = () => {
 					percentage="+9"
 				/>
 				<Card
-					icon={MdAnalytics}
+					icon={BiSolidShoppingBag}
 					iconBg="bg-green-500"
 					background="bg-green-500/10"
 					totalSale="432"
@@ -93,7 +97,7 @@ const Sales = () => {
 					percentage="+1.2"
 				/>
 				<Card
-					icon={MdAnalytics}
+					icon={FaUserPlus}
 					iconBg="bg-purple-500"
 					background="bg-purple-500/10"
 					totalSale="54"
