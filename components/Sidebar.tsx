@@ -7,14 +7,16 @@ import { HiMiniUser } from "react-icons/hi2";
 import { menuItems } from "@/constants/Sidebar";
 import { cn } from "@/lib/utils";
 import { Switch } from "./ui/switch";
+import { Button } from "./ui/button";
+import { FiLogOut } from "react-icons/fi";
 
 const Sidebar = () => {
 	const pathname = usePathname();
 
 	return (
-		<div className="bg-white dark:bg-soft-black dark:text-white w-full h-screen overflow-y-scroll py-6 px-3">
+		<div className="fixed top-0 left-0 max-w-[17rem] w-full bg-white dark:bg-soft-black dark:text-white h-screen overflow-y-scroll py-7 px-3">
 			<div className="flex items-center gap-2">
-				<div className="bg-black/60 dark:bg-white dark:text-black w-fit rounded-full p-2 text-white text-3xl">
+				<div className="bg-neutral-400 dark:bg-white dark:text-neutral-600 w-fit rounded-full p-2 text-white text-3xl">
 					<HiMiniUser />
 				</div>
 				<div className="capitalize ">
@@ -28,13 +30,13 @@ const Sidebar = () => {
 			</div>
 
 			<div>
-				<ul className="flex flex-col gap-8 capitalize text-sm mt-5">
+				<ul className="flex flex-col gap-8 capitalize text-sm mt-8">
 					{menuItems.map((item) => (
 						<li key={item.title}>
 							<span className="text-black/50 dark:text-neutral-300 font-semibold">
 								{item.title}
 							</span>
-							<div className="flex flex-col gap-1">
+							<div className="flex flex-col gap-0.5">
 								{item.links.map((link) => (
 									<Link
 										href={link.path}
@@ -59,8 +61,15 @@ const Sidebar = () => {
 							</div>
 						</li>
 					))}
-					<div className="flex items-center justify-between">
-						<span>Light</span>
+					<button className="-mt-7 capitalize hover:bg-indigo-600 flex items-center justify-start gap-2 px-4 py-3.5 hover:text-white dark:text-white rounded-lg">
+						<span className="text-xl">
+							<FiLogOut />
+						</span>
+						<span className="text-[.9rem]">logout</span>
+					</button>
+
+					<div className="flex items-center justify-between text-[.9rem] font-semibold bg-muted-foreground/5 py-4 px-5 rounded-md">
+						<span>Dark</span>
 						<Switch />
 					</div>
 				</ul>

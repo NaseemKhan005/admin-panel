@@ -16,13 +16,16 @@ export default function DashboardLayout({
 }) {
 	return (
 		<div
-			className={cn(poppins.className, "flex items-start gap-3 bg-[#FAFBFD] dark:bg-dark-black dark:text-white")}
+			className={cn(
+				poppins.className,
+				"bg-[#FAFBFD] dark:bg-dark-black dark:text-white"
+			)}
 		>
-			<div className="flex-[1]">
+			<div className="">
 				<Sidebar />
 			</div>
 
-			<div className="flex-[3.5] pr-3 py-3">
+			<div className="p-3 ml-[17rem] min-h-screen h-full">
 				<Navbar />
 				{children}
 			</div>
