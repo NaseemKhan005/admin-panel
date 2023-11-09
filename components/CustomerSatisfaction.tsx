@@ -1,53 +1,57 @@
 "use client";
 
 import {
-	LineChart,
-	Line,
-	XAxis,
-	YAxis,
-	Tooltip,
+	AreaChart,
+	Area,
 	Legend,
+	Tooltip,
 	ResponsiveContainer,
 } from "recharts";
 
 import { data } from "@/constants/Charts";
 
-const WeeklyRevenue = () => {
+const CustomerSatisfaction = () => {
 	return (
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
 			<h2 className="text-soft-black capitalize dark:text-white font-semibold">
-				Weekly Revenue
+				Customer Satisfaction
 			</h2>
 
-			<div className="h-[350px] 2xl:h-[400px] mt-8 text-xs dark:text-white">
+			<div className="h-[240px] mt-8 text-xs dark:text-white">
 				<ResponsiveContainer width="100%" height="95%">
-					<LineChart
+					<AreaChart
 						width={500}
-						height={300}
+						height={400}
 						data={data}
 						margin={{
 							top: 5,
-							right: 30,
-							left: 20,
-							bottom: 5,
+							right: 0,
+							left: 0,
+							bottom: 0,
 						}}
 					>
-						<XAxis dataKey="name" />
-						<YAxis />
 						<Tooltip />
 						<Legend />
-						<Line
+
+						<Area
 							type="monotone"
 							dataKey="click"
-							stroke="#8884d8"
-							activeDot={{ r: 8 }}
+							stackId="1"
+							stroke="blue"
+							fill="#009DFF"
 						/>
-						<Line type="monotone" dataKey="visit" stroke="#82ca9d" />
-					</LineChart>
+						<Area
+							type="monotone"
+							dataKey="visit"
+							stackId="1"
+							stroke="green"
+							fill="#00E096"
+						/>
+					</AreaChart>
 				</ResponsiveContainer>
 			</div>
 		</div>
 	);
 };
 
-export default WeeklyRevenue;
+export default CustomerSatisfaction;

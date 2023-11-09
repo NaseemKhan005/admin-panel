@@ -6,7 +6,7 @@ const Transactions = () => {
 
 	return (
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
-			<h2 className="text-soft-black capitalize dark:text-white font-semibold text-lg mb-5">
+			<h2 className="text-soft-black capitalize dark:text-white font-semibold mb-5">
 				latest Transactions
 			</h2>
 

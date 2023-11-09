@@ -1,6 +1,8 @@
+import CustomerSatisfaction from "@/components/CustomerSatisfaction";
 import Sales from "@/components/Sales";
 import TotalRevenue from "@/components/TotalRevenue";
 import Transactions from "@/components/Transactions";
+import VisitorInsights from "@/components/VisitorInsights";
 import WeeklyRevenue from "@/components/WeeklyRevenue";
 
 const Dashboard = () => {
@@ -11,8 +13,10 @@ const Dashboard = () => {
 				<Transactions />
 				<WeeklyRevenue />
 			</div>
-			<div className="flex-[1] w-full">
+			<div className="flex-[1] w-full flex flex-col gap-5">
 				<TotalRevenue />
+				<CustomerSatisfaction />
+				<VisitorInsights />
 			</div>
 		</div>
 	);

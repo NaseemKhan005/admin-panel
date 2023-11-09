@@ -55,7 +55,7 @@ const Sales = () => {
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
 			<div className="flex items-center justify-between">
 				<div>
-					<h2 className="text-soft-black dark:text-white font-semibold text-lg">
+					<h2 className="text-soft-black dark:text-white font-semibold">
 						Today&apos;s Sales
 					</h2>
 					<p className="text-muted-foreground/60 dark:text-white/50 text-sm">
