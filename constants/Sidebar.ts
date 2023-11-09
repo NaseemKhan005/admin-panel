@@ -1,6 +1,26 @@
-import { BiSolidDashboard, BiSolidHelpCircle, BiSolidShoppingBag } from "react-icons/bi";
-import { HiUsers, HiMiniCurrencyDollar } from "react-icons/hi2";
-import { BsCalendarEventFill } from "react-icons/bs";
+import { MdAnalytics, MdOutlineAnalytics } from "react-icons/md";
+import { RxDashboard } from "react-icons/rx";
+import { SiGoogleanalytics } from "react-icons/si";
+import { TbBrandGoogleAnalytics } from "react-icons/tb";
+import {
+	BiHelpCircle,
+	BiSolidDashboard,
+	BiSolidHelpCircle,
+} from "react-icons/bi";
+import {
+	HiUsers,
+	HiMiniUserGroup,
+	HiOutlineUsers,
+	HiOutlineUserGroup,
+} from "react-icons/hi2";
+import {
+	AiFillDollarCircle,
+	AiFillSetting,
+	AiFillShopping,
+	AiOutlineDollarCircle,
+	AiOutlineSetting,
+	AiOutlineShopping,
+} from "react-icons/ai";
 
 export const menuItems = [
 	{
@@ -9,22 +29,26 @@ export const menuItems = [
 			{
 				name: "dashboard",
 				path: "/dashboard",
-				icon: BiSolidDashboard,
+				icon: RxDashboard,
+				activeIcon: BiSolidDashboard,
 			},
 			{
 				name: "users",
-				path: "/users",
-				icon: HiUsers,
+				path: "/dashboard/users",
+				icon: HiOutlineUsers,
+				activeIcon: HiUsers,
 			},
 			{
 				name: "products",
-				path: "/products",
-				icon: BiSolidShoppingBag,
+				path: "/dashboard/products",
+				icon: AiOutlineShopping,
+				activeIcon: AiFillShopping,
 			},
 			{
 				name: "transactions",
-				path: "/transactions",
-				icon: HiMiniCurrencyDollar,
+				path: "/dashboard/transactions",
+				icon: AiOutlineDollarCircle,
+				activeIcon: AiFillDollarCircle,
 			},
 		],
 	},
@@ -33,18 +57,21 @@ export const menuItems = [
 		links: [
 			{
 				name: "revenue",
-				path: "/revenue",
-				icon: BsCalendarEventFill,
+				path: "/dashboard/revenue",
+				icon: TbBrandGoogleAnalytics,
+				activeIcon: SiGoogleanalytics,
 			},
 			{
 				name: "report",
-				path: "/report",
-				icon: HiUsers,
+				path: "/dashboard/report",
+				icon: MdOutlineAnalytics,
+				activeIcon: MdAnalytics,
 			},
 			{
 				name: "team",
-				path: "/team",
-				icon: BiSolidDashboard,
+				path: "/dashboard/team",
+				icon: HiOutlineUserGroup,
+				activeIcon: HiMiniUserGroup,
 			},
 		],
 	},
@@ -53,13 +80,15 @@ export const menuItems = [
 		links: [
 			{
 				name: "settings",
-				path: "/settings",
-				icon: BiSolidDashboard,
+				path: "/dashboard/settings",
+				icon: AiOutlineSetting,
+				activeIcon: AiFillSetting,
 			},
 			{
 				name: "help",
-				path: "/help",
-				icon: BiSolidHelpCircle,
+				path: "/dashboard/help",
+				icon: BiHelpCircle,
+				activeIcon: BiSolidHelpCircle,
 			},
 		],
 	},
