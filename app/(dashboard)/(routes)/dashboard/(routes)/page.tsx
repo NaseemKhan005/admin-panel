@@ -1,5 +1,5 @@
-import RightSidebar from "@/components/RightSidebar";
 import Sales from "@/components/Sales";
+import TotalRevenue from "@/components/TotalRevenue";
 import Transactions from "@/components/Transactions";
 import WeeklyRevenue from "@/components/WeeklyRevenue";
 
@@ -12,7 +12,7 @@ const Dashboard = () => {
 				<WeeklyRevenue />
 			</div>
 			<div className="flex-[1] w-full">
-				<RightSidebar />
+				<TotalRevenue />
 			</div>
 		</div>
 	);
