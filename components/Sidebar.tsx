@@ -33,7 +33,7 @@ const Sidebar = () => {
 							<span className="text-black/50 dark:text-neutral-300 font-semibold text-[.8rem] 2xl:text-sm">
 								{item.title}
 							</span>
-							<div className="flex flex-col gap-0.5">
+							<div className="flex flex-col gap-1">
 								{item.links.map((link) => (
 									<Link
 										href={link.path}

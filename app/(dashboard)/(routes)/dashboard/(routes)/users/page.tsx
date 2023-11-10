@@ -14,7 +14,7 @@ const Users = () => {
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
 			<div className="flex items-center justify-between gap-2 w-full">
 				<div className="flex-1">
-					<Search placeholder="Search for a user..." className="w-full" />
+					<Search placeholder="Search for user..." className="w-full" />
 				</div>
 				<Link href="/dashboard/users/add" className="w-fit">
 					<Button className="px-3 bg-indigo-600 hover:bg-indigo-700 text-white">
