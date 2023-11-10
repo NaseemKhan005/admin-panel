@@ -1,16 +1,24 @@
+import Link from "next/link";
 import Image from "next/image";
-import Avatar from "./common/Avatar";
+import { AiFillEye, AiTwotoneDelete } from "react-icons/ai";
 
-const Transactions = () => {
+import Search from "@/components/common/Search";
+import Avatar from "@/components/common/Avatar";
+import Pagination from "@/components/common/Pagination";
+import { Button } from "@/components/ui/button";
+
+const Users = () => {
 	const user = true;
 
 	return (
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
-			<h2 className="text-soft-black capitalize dark:text-white font-semibold mb-5">
-				latest Transactions
-			</h2>
+			<div className="flex items-center justify-between gap-2 w-full">
+				<div className="flex-1">
+					<Search placeholder="Search for user..." className="w-full" />
+				</div>
+			</div>
 
-			<table className="w-full capitalize text-left text-[.8rem] 2xl:text-sm">
+			<table className="w-full capitalize text-left text-[.8rem] 2xl:text-sm mt-8">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -135,8 +143,9 @@ const Transactions = () => {
 					</tr>
 				</tbody>
 			</table>
+			<Pagination />
 		</div>
 	);
 };
 
-export default Transactions;
+export default Users;
