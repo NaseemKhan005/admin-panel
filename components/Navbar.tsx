@@ -25,11 +25,19 @@ const Navbar = () => {
 					/>
 					<FiSearch className="text-indigo-500 dark:text-indigo-400 absolute top-1/2 -translate-y-1/2 left-2 text-xl" />
 				</div>
-				<div className="flex items-center">
-					<Button variant="ghost" size="icon">
+				<div className="flex items-center gap-1">
+					<Button
+						variant="ghost"
+						size="icon"
+						className="bg-green-500/10 text-green-500 hover:bg-green-500/20 hover:text-green-500"
+					>
 						<MdOutlineMessage className="text-xl" />
 					</Button>
-					<Button variant="ghost" size="icon">
+					<Button
+						variant="ghost"
+						size="icon"
+						className="bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:text-orange-500"
+					>
 						<BiSolidBell className="text-xl" />
 					</Button>
 					<ToggleTheme />
