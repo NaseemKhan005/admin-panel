@@ -7,7 +7,7 @@ import WeeklyRevenue from "@/components/WeeklyRevenue";
 
 const Dashboard = () => {
 	return (
-		<div className="mt-6 flex items-start gap-5">
+		<div className="flex items-start gap-5">
 			<div className="flex-[2.5] w-full flex flex-col gap-5">
 				<Sales />
 				<Transactions />

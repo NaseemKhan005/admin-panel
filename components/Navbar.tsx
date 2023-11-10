@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
 	return (
-		<div className="flex items-center justify-between bg-white dark:bg-soft-black px-5 py-3 rounded-lg">
+		<div className="flex items-center justify-between bg-white dark:bg-soft-black px-5 py-3 rounded-lg mb-5">
 			<div className="flex items-center gap-1">
 				<span className="block lg:hidden text-xl cursor-pointer hover:bg-muted-foreground/10 p-2 rounded-full">
 					<IoMenu />

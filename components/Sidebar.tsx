@@ -30,7 +30,7 @@ const Sidebar = () => {
 				<ul className="flex flex-col gap-8 capitalize text-sm mt-8">
 					{menuItems.map((item) => (
 						<li key={item.title}>
-							<span className="text-black/50 dark:text-neutral-300 font-semibold">
+							<span className="text-black/50 dark:text-neutral-300 font-semibold text-[.8rem] 2xl:text-sm">
 								{item.title}
 							</span>
 							<div className="flex flex-col gap-0.5">
@@ -39,13 +39,13 @@ const Sidebar = () => {
 										href={link.path}
 										key={link.path}
 										className={cn(
-											"flex items-center text-[.9rem] gap-2 px-4 py-3.5 rounded-lg first:mt-2",
+											"flex items-center text-[.8rem] 2xl:text-[.9rem] gap-2 px-4 py-3.5 rounded-lg first:mt-2",
 											pathname === link.path
 												? "bg-indigo-600 hover:bg-indigo-700 text-white"
 												: "hover:bg-indigo-600 text-black hover:text-white dark:text-white"
 										)}
 									>
-										<span className="text-xl">
+										<span className="text-lg 2xl:text-xl">
 											{pathname === link.path ? (
 												<link.activeIcon />
 											) : (
