@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { cn } from "@/lib/utils";
 
 const poppins = Poppins({
 	subsets: ["latin"],
@@ -21,7 +22,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={poppins.className}>
+			<body
+				className={cn(
+					poppins.className,
+					"bg-[#FAFBFD] dark:bg-dark-black dark:text-white"
+				)}
+			>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
