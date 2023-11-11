@@ -62,7 +62,7 @@ const Products = () => {
 						<td className="pt-4 capitalize">Nov 05, 2023</td>
 						<td className="pt-4 font-semibold">Out of stock</td>
 						<td className="pt-4 w-fit">
-							<Link href="/dashboard">
+							<Link href="/dashboard/products/id">
 								<Button
 									size="icon"
 									variant="ghost"

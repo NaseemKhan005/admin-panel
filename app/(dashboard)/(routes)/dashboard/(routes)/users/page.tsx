@@ -57,7 +57,7 @@ const Users = () => {
 						<td className="pt-4">Admin</td>
 						<td className="pt-4">Active</td>
 						<td className="pt-4 w-fit">
-							<Link href="/dashboard">
+							<Link href="/dashboard/users/id">
 								<Button
 									size="icon"
 									variant="ghost"

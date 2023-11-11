@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import Image from "next/image";
 
 import {
 	Select,
@@ -12,51 +10,57 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import Avatar from "@/components/common/Avatar";
 
-const AddUser = () => {
-	const [showPassword, setShowPassword] = useState(false);
+const EditUser = () => {
+	const user = true;
 
 	return (
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
-			<h2 className="text-soft-black capitalize dark:text-white font-semibold mb-5">
-				Add New User
-			</h2>
+			<div className="flex items-center flex-col gap-2 font-semibold mb-4">
+				{user ? (
+					<Image
+						src="/user.jpg"
+						width={100}
+						height={100}
+						alt="user"
+						className="w-52 aspect-square rounded-full object-cover object-top"
+					/>
+				) : (
+					<Avatar className="text-[12rem]" />
+				)}
+				<span className="text-xl lg:text-2xl">Naseem Khan</span>
+			</div>
 
 			<form action="">
-				<div className="flex items-start justify-between gap-2 mb-2">
+				<div className="flex items-start justify-between gap-2 mb-4">
 					<div className="w-full flex flex-col gap-2">
+						<label htmlFor="username" className="text-[.8rem] font-[500] mt-2">
+							Username
+						</label>
 						<Input
 							type="text"
-							placeholder="Username"
+							placeholder="Naseem Khan"
 							name="username"
+							id="username"
 							required
 							className="py-[1.6rem] dark:bg-muted-foreground/5"
 						/>
-						<div className="relative">
-							<Input
-								type={showPassword ? "text" : "password"}
-								placeholder="Password"
-								name="password"
-								required
-								className="py-[1.6rem] dark:bg-muted-foreground/5"
-							/>
-							{showPassword ? (
-								<span
-									className="text-lg p-2 text-black/70 dark:text-white hover:bg-indigo-500/10 rounded-full cursor-pointer absolute top-1/2 -translate-y-1/2 right-2 hover:text-indigo-600"
-									onClick={() => setShowPassword(false)}
-								>
-									<AiOutlineEye />
-								</span>
-							) : (
-								<span
-									className="text-lg p-2 text-black/30 dark:text-white/50 hover:bg-indigo-500/10 rounded-full cursor-pointer absolute top-1/2 -translate-y-1/2 right-2 hover:text-indigo-600"
-									onClick={() => setShowPassword(true)}
-								>
-									<AiOutlineEyeInvisible />
-								</span>
-							)}
-						</div>
+						<label htmlFor="password" className="text-[.8rem] font-[500] mt-2">
+							Password
+						</label>
+						<Input
+							type="password"
+							placeholder="Password"
+							name="password"
+							id="password"
+							required
+							className="py-[1.6rem] dark:bg-muted-foreground/5"
+						/>
+
+						<label htmlFor="isAdmin" className="text-[.8rem] font-[500] mt-2">
+							Is Admin
+						</label>
 						<Select name="isAdmin">
 							<SelectTrigger
 								className="w-full py-[1.6rem] dark:bg-muted-foreground/5"
@@ -72,19 +76,29 @@ const AddUser = () => {
 					</div>
 
 					<div className="w-full flex flex-col gap-2">
+						<label htmlFor="email" className="text-[.8rem] font-[500] mt-2">
+							Email
+						</label>
 						<Input
 							type="email"
-							placeholder="Email"
+							placeholder="naseemkhan@gmail.com"
 							name="email"
+							id="email"
 							required
 							className="py-[1.6rem] dark:bg-muted-foreground/5"
 						/>
+						<label htmlFor="phone" className="text-[.8rem] font-[500] mt-2">
+							Phone
+						</label>
 						<Input
 							type="number"
-							placeholder="Phone"
+							placeholder="+12 345 6789 0"
 							name="phone"
 							className="py-[1.6rem] dark:bg-muted-foreground/5"
 						/>
+						<label htmlFor="isActive" className="text-[.8rem] font-[500] mt-2">
+							Is Active
+						</label>
 						<Select name="isActive">
 							<SelectTrigger
 								className="w-full py-[1.6rem] dark:bg-muted-foreground/5"
@@ -100,19 +114,22 @@ const AddUser = () => {
 					</div>
 				</div>
 
+				<label htmlFor="address" className="text-[.8rem] font-[500]">
+					Address
+				</label>
 				<Textarea
 					name="address"
 					id="address"
 					placeholder="Address"
 					rows={8}
-					className="dark:bg-muted-foreground/5 pt-3"
+					className="dark:bg-muted-foreground/5 pt-3 mt-2"
 				/>
-				<Button className="px-3 py-[1.3rem] mt-3 bg-indigo-600 hover:bg-indigo-700 text-white">
-					Add User
+				<Button className="w-full py-6 px-3 mt-3 bg-indigo-600 hover:bg-indigo-700 text-white">
+					Update
 				</Button>
 			</form>
 		</div>
 	);
 };
 
-export default AddUser;
+export default EditUser;
