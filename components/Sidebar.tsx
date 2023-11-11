@@ -17,9 +17,7 @@ const Sidebar = () => {
 			<div className="flex items-center gap-2">
 				<Avatar />
 				<div className="capitalize ">
-					<p className="font-semibold dark:text-white">
-						naseem khan
-					</p>
+					<p className="font-semibold dark:text-white">naseem khan</p>
 					<p className="text-[.8rem] -mt-1 text-black/70 dark:text-neutral-300">
 						administrator
 					</p>
@@ -39,7 +37,7 @@ const Sidebar = () => {
 										href={link.path}
 										key={link.path}
 										className={cn(
-											"flex items-center text-[.8rem] 2xl:text-[.9rem] gap-2 px-4 py-3.5 rounded-lg first:mt-2",
+											"flex items-start text-[.8rem] 2xl:text-[.9rem] gap-2 px-4 py-3.5 rounded-lg first:mt-2",
 											pathname === link.path
 												? "bg-indigo-600 hover:bg-indigo-700 text-white"
 												: "hover:bg-indigo-600 text-black hover:text-white dark:text-white"
