@@ -5,9 +5,8 @@ import { AiFillEye, AiTwotoneDelete } from "react-icons/ai";
 import Search from "@/components/common/Search";
 import Avatar from "@/components/common/Avatar";
 import Pagination from "@/components/common/Pagination";
-import { Button } from "@/components/ui/button";
 
-const Users = () => {
+const Transactions = () => {
 	const user = true;
 
 	return (
@@ -148,4 +147,4 @@ const Users = () => {
 	);
 };
 
-export default Users;
+export default Transactions;

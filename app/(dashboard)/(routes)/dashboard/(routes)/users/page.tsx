@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { AiFillEye, AiTwotoneDelete } from "react-icons/ai";
+import { AiTwotoneDelete } from "react-icons/ai";
+import { FiEdit } from "react-icons/fi";
 
 import Search from "@/components/common/Search";
 import Avatar from "@/components/common/Avatar";
@@ -62,7 +63,7 @@ const Users = () => {
 									variant="ghost"
 									className="bg-green-500/10 text-green-500 rounded-full text-xl w-9 h-9 hover:bg-green-500/20 hover:text-green-500 mr-2"
 								>
-									<AiFillEye />
+									<FiEdit />
 								</Button>
 							</Link>
 							<Link href="/dashboard">
