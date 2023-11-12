@@ -7,9 +7,12 @@ import Search from "@/components/common/Search";
 import Avatar from "@/components/common/Avatar";
 import Pagination from "@/components/common/Pagination";
 import { Button } from "@/components/ui/button";
+import { fetchUsers } from "@/lib/data";
 
-const Users = () => {
-	const user = true;
+const Users = async () => {
+	// const user = true;
+	const users = await fetchUsers();
+	console.log(users);
 
 	return (
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
@@ -37,46 +40,50 @@ const Users = () => {
 				</thead>
 
 				<tbody>
-					<tr>
-						<td className="flex items-center gap-2 font-semibold pt-4">
-							{user ? (
-								<Image
-									src="/user.jpg"
-									width={100}
-									height={100}
-									alt="user"
-									className="w-10 aspect-square rounded-full object-contain object-top"
-								/>
-							) : (
-								<Avatar className="text-lg" />
-							)}
-							<span>Naseem Khan</span>
-						</td>
-						<td className="pt-4">naseemkhan@gmail.com</td>
-						<td className="pt-4">25/11/2023</td>
-						<td className="pt-4">Admin</td>
-						<td className="pt-4">Active</td>
-						<td className="pt-4 w-fit">
-							<Link href="/dashboard/users/id">
-								<Button
-									size="icon"
-									variant="ghost"
-									className="bg-green-500/10 text-green-500 rounded-full text-xl w-9 h-9 hover:bg-green-500/20 hover:text-green-500 mr-2"
-								>
-									<FiEdit />
-								</Button>
-							</Link>
-							<Link href="/dashboard">
-								<Button
-									size="icon"
-									variant="ghost"
-									className="bg-red-500/10 text-red-500 rounded-full text-xl w-9 h-9 hover:bg-red-500/20 hover:text-red-500"
-								>
-									<AiTwotoneDelete />
-								</Button>
-							</Link>
-						</td>
-					</tr>
+					{users.map((user) => (
+						<tr key={user._id}>
+							<td className="flex items-center gap-2 font-semibold pt-4">
+								{user.image ? (
+									<Image
+										src={`${user.image}`}
+										width={100}
+										height={100}
+										alt="user"
+										className="w-10 aspect-square rounded-full object-cover object-top"
+									/>
+								) : (
+									<Avatar className="text-lg" />
+								)}
+								<span>{user.username}</span>
+							</td>
+							<td className="pt-4">{user.email}</td>
+							<td className="pt-4">
+								{user.createdAt?.toString().slice(4, 16)}
+							</td>
+							<td className="pt-4">{user.isAdmin ? "Admin" : "Client"}</td>
+							<td className="pt-4">{user.isActive ? "Active" : "Passive"}</td>
+							<td className="pt-4 w-fit">
+								<Link href={`/dashboard/users/${user._id}`}>
+									<Button
+										size="icon"
+										variant="ghost"
+										className="bg-green-500/10 text-green-500 rounded-full text-xl w-9 h-9 hover:bg-green-500/20 hover:text-green-500 mr-2"
+									>
+										<FiEdit />
+									</Button>
+								</Link>
+								<Link href="/dashboard">
+									<Button
+										size="icon"
+										variant="ghost"
+										className="bg-red-500/10 text-red-500 rounded-full text-xl w-9 h-9 hover:bg-red-500/20 hover:text-red-500"
+									>
+										<AiTwotoneDelete />
+									</Button>
+								</Link>
+							</td>
+						</tr>
+					))}
 				</tbody>
 			</table>
 			<Pagination />

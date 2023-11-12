@@ -52,7 +52,6 @@ const productSchema = new mongoose.Schema(
 		category: {
 			type: String,
 			required: true,
-			unique: true,
 		},
 		price: {
 			type: Number,
@@ -64,8 +63,9 @@ const productSchema = new mongoose.Schema(
 			required: true,
 		},
 		stock: {
-			type: String,
+			type: Number,
 			required: true,
+			min: 0,
 		},
 		color: {
 			type: String,

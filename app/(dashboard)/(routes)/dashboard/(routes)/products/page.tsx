@@ -6,9 +6,10 @@ import { FiEdit } from "react-icons/fi";
 import Search from "@/components/common/Search";
 import Pagination from "@/components/common/Pagination";
 import { Button } from "@/components/ui/button";
+import { fetchProducts } from "@/lib/data";
 
-const Products = () => {
-	const product = true;
+const Products = async () => {
+	const products = await fetchProducts();
 
 	return (
 		<div className="bg-white dark:bg-soft-black rounded-xl p-5 shadow-white">
@@ -36,52 +37,53 @@ const Products = () => {
 				</thead>
 
 				<tbody>
-					<tr>
-						<td className="flex items-center gap-2 font-semibold pt-4">
-							{product ? (
+					{products.map((product) => (
+						<tr key={product._id}>
+							<td className="flex items-center gap-2 font-semibold pt-4">
 								<Image
-									src="/product.jpg"
+									src={product?.image || "/product-not-found.jpg"}
 									width={100}
 									height={100}
 									alt="product"
 									className="w-11 aspect-square rounded-full object-cover object-center bg-muted-foreground/20"
 								/>
-							) : (
-								<Image
-									src="/product-not-found.jpg"
-									width={100}
-									height={100}
-									alt="product"
-									className="w-11 aspect-square rounded-full object-contain object-center bg-muted-foreground/20"
-								/>
-							)}
-							<span>IPhone</span>
-						</td>
-						<td className="pt-4">description</td>
-						<td className="pt-4 font-semibold">$599.00</td>
-						<td className="pt-4 capitalize">Nov 05, 2023</td>
-						<td className="pt-4 font-semibold">Out of stock</td>
-						<td className="pt-4 w-fit">
-							<Link href="/dashboard/products/id">
-								<Button
-									size="icon"
-									variant="ghost"
-									className="bg-green-500/10 text-green-500 rounded-full text-xl w-9 h-9 hover:bg-green-500/20 hover:text-green-500 mr-2"
-								>
-									<FiEdit />
-								</Button>
-							</Link>
-							<Link href="/dashboard">
-								<Button
-									size="icon"
-									variant="ghost"
-									className="bg-red-500/10 text-red-500 rounded-full text-xl w-9 h-9 hover:bg-red-500/20 hover:text-red-500"
-								>
-									<AiTwotoneDelete />
-								</Button>
-							</Link>
-						</td>
-					</tr>
+
+								<span>{product.name}</span>
+							</td>
+							<td className="pt-4">
+								{product.desc.length > 2
+									? `${product.desc.slice(0, 35)}...`
+									: product.desc}
+							</td>
+							<td className="pt-4 font-semibold">${product.price}</td>
+							<td className="pt-4 capitalize">
+								{product.createdAt?.toString().slice(4, 16)}
+							</td>
+							<td className="pt-4 font-semibold">
+								{product.stock.length > 0 ? product.stock : "Out of Stock"}
+							</td>
+							<td className="pt-4 w-fit">
+								<Link href={`/dashboard/products/${product._id}`}>
+									<Button
+										size="icon"
+										variant="ghost"
+										className="bg-green-500/10 text-green-500 rounded-full text-xl w-9 h-9 hover:bg-green-500/20 hover:text-green-500 mr-2"
+									>
+										<FiEdit />
+									</Button>
+								</Link>
+								<Link href="/dashboard">
+									<Button
+										size="icon"
+										variant="ghost"
+										className="bg-red-500/10 text-red-500 rounded-full text-xl w-9 h-9 hover:bg-red-500/20 hover:text-red-500"
+									>
+										<AiTwotoneDelete />
+									</Button>
+								</Link>
+							</td>
+						</tr>
+					))}
 				</tbody>
 			</table>
 			<Pagination />
