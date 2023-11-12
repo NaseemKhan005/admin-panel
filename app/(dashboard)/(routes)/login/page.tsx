@@ -17,7 +17,7 @@ const Login = () => {
 			<div className="w-full sm:bg-white sm:dark:bg-soft-black rounded-xl sm:shadow-2xl sm:drop-shadow-md md:mt-0 sm:max-w-[24rem] xl:p-0">
 				<div className="p-2 sm:p-6 space-y-4 sm:space-y-6 sm:px-8 py-10 sm:mb-8 sm:mt-5">
 					<h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-2xl">
-						SignIn to your account
+						Login to your account
 					</h1>
 					<form className="space-y-4 md:space-y-6" action="">
 						<div>
@@ -77,7 +77,7 @@ const Login = () => {
 									showArrow ? "w-16" : "w-full"
 								)}
 							>
-								Sign in
+								Login
 							</span>
 							<span
 								className={cn(
